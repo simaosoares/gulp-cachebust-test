@@ -16,7 +16,7 @@
     "url": "https://github.com/simaosoares/gulp-cachebust-test.git"
   },
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-cachebust": "0.0.10",
     "gulp-connect": "^5.7.0"
   }

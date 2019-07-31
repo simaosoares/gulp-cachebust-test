@@ -4,22 +4,31 @@ const CacheBuster = require('gulp-cachebust');
 
 const cachebust = new CacheBuster();
 
-gulp.task('build-css', () => {
+function css() {
     return gulp.src('styles/*.css')
         .pipe(cachebust.resources())
         .pipe(gulp.dest('dist/css'));
-});
+}
 
-gulp.task('build-html', ['build-css'], () => {
+function html() {
     return gulp.src('index.html')
         .pipe(cachebust.references())
         .pipe(gulp.dest('dist'));
-});
+}
 
-gulp.task('server', () => {
-    connect.server( {
+function server(done) {
+   connect.server( {
         root: 'dist'
-    })
-});
+    }, () => {
+      return done();
+    });
+}
 
-gulp.task('default', ['build-html', 'server']);
+exports.css = css;
+exports.html = html;
+exports.server = server;
+
+/*
+ * Define default task that can be called by just running `gulp` from cli
+ */
+exports.default = gulp.series(css, html, server);
