@@ -1,0 +1,23 @@
+{
+  "name": "gulp-cachebust-test",
+  "version": "1.0.0",
+  "description": "Gulp chachebust sample application",
+  "keywords": [
+    "gulp",
+    "cachebust",
+    "nodejs",
+    "javascript",
+    "html"
+  ],
+  "author": "Simão Soares",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/simaosoares/gulp-cachebust-test.git"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cachebust": "0.0.10",
+    "gulp-connect": "^5.7.0"
+  }
+}
