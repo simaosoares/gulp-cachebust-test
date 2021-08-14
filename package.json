@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "del": "^5.0.0",
+    "glob-watcher": "^5.0.5",
     "gulp": "^4.0.2",
     "gulp-cachebust": "0.0.10",
     "gulp-connect": "^5.7.0",
