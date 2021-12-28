@@ -16,11 +16,26 @@
     "url": "https://github.com/simaosoares/gulp-cachebust-test.git"
   },
   "devDependencies": {
+    "chokidar": "^3.5.2",
     "del": "^5.0.0",
+    "glob-parent": "^5.1.2",
     "glob-watcher": "^5.0.5",
     "gulp": "^4.0.2",
     "gulp-cachebust": "0.0.10",
-    "gulp-connect": "^5.7.0",
-    "yargs-parser": ">=13.1.2"
+    "gulp-connect": "^5.7.0"
+  },
+  "overrides": {
+    "gulp": {
+      "vinyl-fs": {
+        "glob-stream": {
+          "glob-parent": "^5.1.2"
+        }
+      },
+      "glob-watcher": {
+        "chokidar": {
+          "glob-parent": "^5.1.2"
+        }
+      }
+    }
   }
 }

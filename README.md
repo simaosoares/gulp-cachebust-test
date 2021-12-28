@@ -10,6 +10,7 @@ npm install
 # Run application
 ```
 gulp
+npx gulp
 ```
 
 # References
